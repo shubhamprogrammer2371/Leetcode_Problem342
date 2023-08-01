@@ -13,16 +13,14 @@ bool isPowerOfFour(int n){
 }
 
 
-
-
 --------------------------------------------------------------------------------------------------------------------------
-
-
-
 
 
 bool isPowerOfFour(int n) {
     return n > 0 && (n & (n - 1)) == 0 && (n & 0x55555555);
 
-// n & (n - 1)) == 0 is a well known trick to test for powers of 2. If it's a power of 4 it can only have a bit set that's present in 0x55555555. There is a variant where instead of testing n & 0x55555555 the following expression is used (n % 3 == 1). The proof for why this works is in the leedcode solutions. I like the &-ing approach as it is faster / cheaper than computing modulo.
+// n & (n - 1)) == 0 is a well known trick to test for powers of 2. If it's a power of 4 it can only have a bit set that's present in 0x55555555. 
+//There is a variant where instead of testing n & 0x55555555 the following expression is used (n % 3 == 1). 
+//The proof for why this works is in the leedcode solutions. 
+//I like the &-ing approach as it is faster / cheaper than computing modulo.
 }
